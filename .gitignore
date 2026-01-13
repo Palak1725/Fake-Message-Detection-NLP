@@ -7,3 +7,6 @@ __pycache__/
 
 #large datasets
 cleaned_data/*.csv
+
+# raw large datasets
+data/raw/archive/
