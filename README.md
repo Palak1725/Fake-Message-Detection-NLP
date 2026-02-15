@@ -113,10 +113,7 @@ predict.py
 
 ---
 
-Here's a clean, professional README.md file based on your project structure and instructions:
-
-```markdown
-# 📱 Fake Message Detection System
+# Fake Message Detection System
 
 An NLP-based machine learning system to detect fake or spam messages using binary classification techniques.
 
@@ -237,6 +234,4 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 This project is open source and available under the [MIT License](LICENSE).
 
 ---
-
-**Made with ❤️ for detecting fake messages**
 ```
