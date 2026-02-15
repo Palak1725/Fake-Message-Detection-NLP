@@ -117,19 +117,29 @@ predict.py
 
 ### 1. Clone the Repository
 
-'''bash
+```bash
 git clone https://github.com/Palak1725/Fake-Message-Detection-NLP.git
 cd Fake-Message-Detection-NLP
-'''
 
-### 2️⃣ Install Dependencies
+
+---
+
+## 2️. Install Dependencies
 
 Install the required Python libraries:
 
 ```bash
 pip install pandas numpy scikit-learn joblib
 
-### 3️⃣ Train the Model (Optional)
+If you prefer using a virtual environment:
+
+```bash
+python -m venv venv
+source venv/bin/activate   # Mac/Linux
+venv\Scripts\activate      # Windows
+pip install pandas numpy scikit-learn joblib
+
+### 3️. Train the Model (Optional)
 
 If you want to retrain the model:
 
