@@ -121,14 +121,14 @@ predict.py
 git clone https://github.com/Palak1725/Fake-Message-Detection-NLP.git
 cd Fake-Message-Detection-NLP
 
-## 2️⃣ Install Dependencies
+### 2️⃣ Install Dependencies
 
 Install the required Python libraries:
 
 ```bash
 pip install pandas numpy scikit-learn joblib
 
-## 3️⃣ Train the Model (Optional)
+### 3️⃣ Train the Model (Optional)
 
 If you want to retrain the model:
 
@@ -145,7 +145,7 @@ This will:
 
 - Save model files (.pkl)
 
-## 4️⃣ Run Real-Time Prediction
+### 4️⃣ Run Real-Time Prediction
 
 '''bash
 python predict.py
@@ -154,7 +154,7 @@ Enter any message to classify it.
 
 Type exit to stop the program.
 
-## 📂 Project Structure
+### 📂 Project Structure
 
 Fake-Message-Detection-NLP/
 │
@@ -167,7 +167,7 @@ Fake-Message-Detection-NLP/
 ├── cleaned_data/
 └── README.md
 
-## 🧠 Concepts Demonstrated
+### 🧠 Concepts Demonstrated
 
 - Supervised Learning
 
