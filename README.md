@@ -225,10 +225,6 @@ The system uses Logistic Regression as the primary classifier, achieving high ac
 - **scikit-learn** - Machine learning algorithms and utilities
 - **joblib** - Model serialization
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Palak1725/Fake-Message-Detection-NLP/issues).
-
 ## 📝 License
 
 This project is open source and available under the [MIT License](LICENSE).
