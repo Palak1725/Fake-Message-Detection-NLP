@@ -5,6 +5,7 @@ from preprocessing import preprocess_text
 from sklearn.feature_extraction.text import TfidfVectorizer  #words->nos. on the basis of tf-idf
 from sklearn.model_selection import train_test_split    #shuffles data, split safely, labels aligned
 from models import train_logistic, train_naive_bayes
+from sklearn.model_selection import cross_val_score
 
 if __name__ == "__main__":
     df = pd.read_csv("cleaned_data/cleaned_sms.csv")
@@ -36,3 +37,7 @@ if __name__ == "__main__":
     nb_model = train_naive_bayes(X_train, Y_train, X_test, Y_test)
     joblib.dump(log_model, "logistic_model.pkl")
     joblib.dump(vectorizer, "tfidf_vectorizer.pkl")
+
+    cv_scores = cross_val_score(log_model, X_tfidf, Y, cv = 5, scoring = "f1")  #validated the model using 5 fold cross-validation to ensure robustness and avoid dependence on a single train test split. 5 times so that each set gets to be the test set once. this is because a single 80-20 test split might be lucky/easy for training. it retrains model multiple times internally and doesn't use previous models. y-true labels needed to train, evaluate, compute f1
+    print("\nCross-validation F1 score: ", cv_scores)
+    print("Average F1 score: ", cv_scores.mean()) #if difference between 1test split and 5 test split is small, it means the model is tsable, no overfitting(model performs very well on training data but poorly on unseen data) and no lucky split.
