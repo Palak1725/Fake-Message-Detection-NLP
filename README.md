@@ -117,9 +117,10 @@ predict.py
 
 ### 1. Clone the Repository
 
-```bash
+'''bash
 git clone https://github.com/Palak1725/Fake-Message-Detection-NLP.git
 cd Fake-Message-Detection-NLP
+'''
 
 ### 2️⃣ Install Dependencies
 
