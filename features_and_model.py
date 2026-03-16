@@ -23,7 +23,7 @@ if __name__ == "__main__":
     log_model = train_logistic(X_train, Y_train, X_test, Y_test)
     
     feature_names = vectorizer.get_feature_names_out()  #get the feature names (words) from the vectorizer
-    coefficients = log_model.coef_[0]  #get the coefficients of the logistic regression model, it is a numpy array which stores the weights for every feature(every word). shape looks like (1, no_of_features). (1,...) because it's a binary classification problem, only one row of weights is needed. If it were multi-class, it would be (no_of_classes, no_of_features). a class is a possibe output label, here 0->not spam, 1->spam. [0] is extracting the first row. higher the positive coefficient, higher the probability of it being a spam and vice-versa.
+    coefficients = log_model.coef_[0]  #get the coefficients of the logistic regression model, coeffecient is a numpy array which stores the weights for every feature(every word). shape looks like (1, no_of_features). (1,...) because it's a binary classification problem, only one row of weights is needed. If it were multi-class, it would be (no_of_classes, no_of_features). a class is a possibe output label, here 0->not spam, 1->spam. [0] is extracting the first row. higher the positive coefficient, higher the probability of it being a spam and vice-versa.
     top_spam_indices = np.argsort(coefficients)[-20:] #argsort returns the indexes that would sort the array like [4,3,2,1,0]. [-20:] is taking 20 words from last of the array,i.e.,largest weights.
     print("\nTop 20 Spam-Indicating Words:")
     for idx in top_spam_indices[::-1]:
